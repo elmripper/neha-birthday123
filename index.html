@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday Neha ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #b30000;
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .container {
+            padding: 60px 20px;
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            animation: pop 1.5s ease-in-out infinite alternate;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+            opacity: 0.95;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            padding: 35px;
+            max-width: 720px;
+            margin: auto;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .message {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            margin-bottom: 30px;
+        }
+
+        .heart {
+            font-size: 3rem;
+            animation: heartbeat 1.2s infinite;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            background: #ffffff;
+            color: #b30000;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 600;
+        }
+
+        button:hover {
+            transform: scale(1.08);
+            background: #ffe6e6;
+        }
+
+        .surprise {
+            display: none;
+            margin-top: 30px;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .footer {
+            margin-top: 60px;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.4); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes pop {
+            from { transform: scale(1); }
+            to { transform: scale(1.08); }
+        }
+
+        .floating-heart {
+            position: fixed;
+            bottom: -20px;
+            font-size: 26px;
+            animation: floatUp 6s linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-120vh); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Happy Birthday Neha ❤️</h1>
+    <h2>To My Favorite Person & Best Friend 🤍</h2>
+
+    <div class="card">
+        <p class="message">
+            Neha, today is your day 🤍  
+            And I just want you to know how special you are to me.  
+            You’re not just my best friend —  
+            you’re the person who makes ordinary moments feel meaningful ❤️  
+            <br><br>
+            Your smile, your talks, your presence —  
+            they matter more to me than you probably realize.
+        </p>
+
+        <div class="heart">❤️</div>
+
+        <button onclick="showSurprise()">Tap for Something Sweet 🎁</button>
+
+        <!-- 🎥 VIDEO SURPRISE -->
+        <div class="surprise" id="surprise">
+
+            <p>
+                🎂✨ I just wanted to make something special for you 🤍  
+                Here’s a little surprise…
+            </p>
+
+            <br>
+
+            <video controls width="100%">
+                <source src="tmp.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> -->
+
+            <br><br>
+
+            <p>
+                Happy Birthday, Neha 🌹  
+                I’m really lucky to have you in my life ❤️
+            </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        Made with ❤️ by your best friend
+    </div>
+</div>
+
+<script>
+    function showSurprise() {
+        document.getElementById("surprise").style.display = "block";
+    }
+
+    setInterval(() => {
+        const heart = document.createElement("div");
+        heart.className = "floating-heart";
+        heart.innerHTML = "❤️";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 6000);
+    }, 450);
+</script>
+
+</body>
+</html>
